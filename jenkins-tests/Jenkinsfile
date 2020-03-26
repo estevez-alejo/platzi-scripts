@@ -17,9 +17,11 @@ pipeline {
 
     stage('JSON') {
       steps {
-        def code = load 'Json.groovy'
-         def bodyText = code.getJson()
-         println bodyText
+        script {
+          def code = load 'Json.groovy'
+          def bodyText = code.getJson()
+          println bodyText
+       }
 /*
         script {
 
