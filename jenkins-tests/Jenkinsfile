@@ -18,7 +18,7 @@ pipeline {
     stage('JSON') {
       steps {
         script {
-          def code = load 'Json.groovy'
+          def code = load 'jenkins-tests/Json.groovy'
           def bodyText = code.getJson()
           println bodyText
        }
