@@ -22,12 +22,10 @@ pipeline {
     stage('Json Processing'){
       steps {
         
-        def json = new JsonSlurper().parseText('{"nombre": "Alejo"}')
-        def bodyText = json.body
-
-        // Check if Pull Request body has certain text
-        if ( bodyText.find('Alejo') ) {
-            println 'Found Alejo user'
+        def props = readJSON text: '{ "key": null, "a": "b" }', returnPojo: true
+        assert props['key'] == null
+        props.each { key, value ->
+            echo "Walked through key $key and value $value"
         }
       }
     }
