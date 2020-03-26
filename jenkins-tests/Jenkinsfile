@@ -21,6 +21,13 @@ pipeline {
           def code = load 'jenkins-tests/Json.groovy'
           def bodyText = code.getJson()
           println bodyText
+
+
+def code = load 'jenkins-tests/processJson.groovy'
+
+
+
+
        }
 /*
         script {
