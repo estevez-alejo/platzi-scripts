@@ -10,7 +10,9 @@ import java.text.SimpleDateFormat
 
 
 private static Map getInputMap() {
-    def inputFile = new File("input.json")
+    //def inputFile = new File("input.json")
+    def inputFile = context.readFile("input.json")
+
     def inputJSON = new JsonSlurper().parseText(inputFile.text)
 
     inputJSON
@@ -37,7 +39,10 @@ private static Map getParamsToPipeAndApp() {
     def paramsMapANDParametros = new ArrayList<HashMap>()
     def paramsMapANDDepsComp = new ArrayList<HashMap>(1)
 
-    def inputFile = new File("input.json")
+    //def inputFile = new File("input.json")
+    def inputFile = context.readFile("input.json")
+
+
     def parametersMap = new JsonSlurper().parseText(inputFile.text)
 
 
@@ -391,7 +396,8 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         def paramsParametrosTemp= [:]
         //Add fichero entry
         paramsParametrosTemp.put("fichero", "config_"+partsTechnology[0])
-        paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("config.json")))
+        //paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("config.json")))
+        paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, context.readFile("config.json")))
         paramsParametrosArrayTmp.add( paramsParametrosTemp )
 
     //For method.json
@@ -399,7 +405,8 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         def paramsParametrosTempMethods= [:]
 
     paramsParametrosTempMethods.put("fichero", "methods_"+partsTechnology[0])
-    paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("methods.json") ))
+    //paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("methods.json") ))
+    paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, context.readFile("methods.json") ))
     paramsParametrosArrayTmp.add( paramsParametrosTempMethods )
 
     return paramsParametrosArrayTmp
