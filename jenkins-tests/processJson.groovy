@@ -399,7 +399,8 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         //Add fichero entry
         paramsParametrosTemp.put("fichero", "config_"+partsTechnology[0])
         //paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("config.json")))
-        paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, readJSON file:'config.json'))
+        def input2 = readJSON file: 'input.json'
+            paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, input2))
         paramsParametrosArrayTmp.add( paramsParametrosTemp )
 
     //For method.json
@@ -408,7 +409,8 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
 
     paramsParametrosTempMethods.put("fichero", "methods_"+partsTechnology[0])
     //paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("methods.json") ))
-    paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, readJSON file: 'methods.json') ))
+    def methods2 = readJSON file: 'methods.json'
+    paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, methods2) )
     paramsParametrosArrayTmp.add( paramsParametrosTempMethods )
 
     return paramsParametrosArrayTmp
