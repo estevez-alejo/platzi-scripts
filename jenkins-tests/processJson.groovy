@@ -14,6 +14,60 @@ private static Map getInputMap() {
     //def inputFile = context.readFile("input.json")
     def inputFile = readJSON file: "input.json"
 
+
+    def inputFile = readJSON text: '{
+       "upstreamJobName":"ios-pod-build-normal",
+       "codeArtifactURL":"https://movbuild.svb.lacaixa.es:8443/jenkins/job/ios-pod-build-normal/7510/artifact/sources_for_gsa.zip",
+       "firstLevelDependencies":[
+          "aarqADAM (= 1.22.0)",
+          "Charts (= 3.2.0)",
+          "eMMa (= 4.5.1)",
+          "FacebookCore (= 0.7.0)",
+          "FacebookLogin (= 0.7.0)",
+          "FacebookShare (= 0.7.0)",
+          "FlexiblePageControl (= 1.0.5)",
+          "IHKeyboardAvoiding (= 4.6)",
+          "Kingfisher (= 4.10.0)",
+          "MCACANAL (= 2.3.0)",
+          "mcaEnv (= 2.3.0)",
+          "MCAIUCOMPS (= 26.73.0)",
+          "MCALGN (= 25.73.1)",
+          "MCALocalizer (= 1.0.5)",
+          "MCAMITAvisoLegal (= 2.3.1)",
+          "MCAMitosisLang (= 1.1.0)",
+          "Mitosis (= 1.6.4)",
+          "PUBLICIDAD (= 25.72.5)",
+          "ReachabilitySwift (= 4.3.0)",
+          "TealiumIOS (= 5.5.5)"
+       ],
+       "buildNumber":"7510",
+       "commitHash":"d7d866b38e5d2338e7951f5209bef0c31128eb3c",
+       "isRelease":null,
+       "garName":"APPCBK_Commons",
+       "modulePath":"/apps/idejen/workspace/ios-pod-build-normal/code/commons",
+       "isAppParent":null,
+       "repo_name":"APPCBK_ios/Commons_APPCBK",
+       "upstreamJobBuildNumber":"7510",
+       "hasArtifact":true,
+       "repoFullName":"APPCBK_ios/Commons_APPCBK",
+       "technology_type":"IOS.BF",
+       "isStore":null,
+       "BUILD_CODE":"0",
+       "repoName":"Commons_APPCBK",
+       "buildVariant":"",
+       "VERSION_CODE":"",
+       "commitId":null,
+       "version":"26.73.5",
+       "REPOSITORY_URL":"",
+       "isInternal":false,
+       "nexusUrl":null,
+       "environment":"pro",
+       "codePath":"/apps/idejen/workspace/ios-pod-build-normal/code",
+       "ciRepoPath":"APPCBK_ios/Commons_APPCBK",
+       "isSnapshot":true,
+       "isMca":false
+    }'
+
     def inputJSON = new JsonSlurper().parseText(inputFile.text)
 
     inputJSON
@@ -42,7 +96,61 @@ private static Map getParamsToPipeAndApp() {
 
     //def inputFile = new File("input.json")
     //def inputFile = context.readFile("input.json")
-    def inputFile = readJSON file: "input.json"
+
+
+    def inputFile = readJSON text: '{
+       "upstreamJobName":"ios-pod-build-normal",
+       "codeArtifactURL":"https://movbuild.svb.lacaixa.es:8443/jenkins/job/ios-pod-build-normal/7510/artifact/sources_for_gsa.zip",
+       "firstLevelDependencies":[
+          "aarqADAM (= 1.22.0)",
+          "Charts (= 3.2.0)",
+          "eMMa (= 4.5.1)",
+          "FacebookCore (= 0.7.0)",
+          "FacebookLogin (= 0.7.0)",
+          "FacebookShare (= 0.7.0)",
+          "FlexiblePageControl (= 1.0.5)",
+          "IHKeyboardAvoiding (= 4.6)",
+          "Kingfisher (= 4.10.0)",
+          "MCACANAL (= 2.3.0)",
+          "mcaEnv (= 2.3.0)",
+          "MCAIUCOMPS (= 26.73.0)",
+          "MCALGN (= 25.73.1)",
+          "MCALocalizer (= 1.0.5)",
+          "MCAMITAvisoLegal (= 2.3.1)",
+          "MCAMitosisLang (= 1.1.0)",
+          "Mitosis (= 1.6.4)",
+          "PUBLICIDAD (= 25.72.5)",
+          "ReachabilitySwift (= 4.3.0)",
+          "TealiumIOS (= 5.5.5)"
+       ],
+       "buildNumber":"7510",
+       "commitHash":"d7d866b38e5d2338e7951f5209bef0c31128eb3c",
+       "isRelease":null,
+       "garName":"APPCBK_Commons",
+       "modulePath":"/apps/idejen/workspace/ios-pod-build-normal/code/commons",
+       "isAppParent":null,
+       "repo_name":"APPCBK_ios/Commons_APPCBK",
+       "upstreamJobBuildNumber":"7510",
+       "hasArtifact":true,
+       "repoFullName":"APPCBK_ios/Commons_APPCBK",
+       "technology_type":"IOS.BF",
+       "isStore":null,
+       "BUILD_CODE":"0",
+       "repoName":"Commons_APPCBK",
+       "buildVariant":"",
+       "VERSION_CODE":"",
+       "commitId":null,
+       "version":"26.73.5",
+       "REPOSITORY_URL":"",
+       "isInternal":false,
+       "nexusUrl":null,
+       "environment":"pro",
+       "codePath":"/apps/idejen/workspace/ios-pod-build-normal/code",
+       "ciRepoPath":"APPCBK_ios/Commons_APPCBK",
+       "isSnapshot":true,
+       "isMca":false
+    }'
+    //def inputFile = readJSON file: "input.json"
 
 
     def parametersMap = new JsonSlurper().parseText(inputFile.text)
