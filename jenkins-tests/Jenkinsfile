@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    nodejs '13.11.0'
+    nodejs 'node-11.0.0'
   }
 
   options {
@@ -17,17 +17,17 @@ pipeline {
     stage('Run tests') {
       steps {
         sh 'cd jenkins-tests && npm t'
-      }
-    }
-    stage('Json Processing'){
-      steps {
         
         def props = readJSON text: '{ "key": null, "a": "b" }', returnPojo: true
         assert props['key'] == null
         props.each { key, value ->
             echo "Walked through key $key and value $value"
         }
-      
+        
+        
+        
+        
       }
     }
- }
+  }
+}
