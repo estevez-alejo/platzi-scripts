@@ -1,0 +1,639 @@
+{
+  "LastUpdate": "20170622_094200",
+  "architecture": {
+    "i18n": {
+      "es": "http://www.caixabank.es/i18n/es",
+      "ca": "http://www.caixabank.es/i18n/ca",
+      "en": "http://www.caixabank.es/i18n/en"
+    },
+    "minorVersion": "1.0.0",
+    "legalDisclaimer": {
+      "es": "https://www.caixabank.es/particular/general/avisolegal_es.html",
+      "ca": "https://www.caixabank.es/particular/general/avisolegal_ca.html",
+      "en": "https://www.caixabank.es/particular/general/avisolegal_en.html"
+    },
+    "marketLink": {
+      "es": "https://itunes.apple.com/es/app/caixabank/id318806094?mt=8",
+      "ca": "https://itunes.apple.com/ca/app/caixabank/id318806094?mt=8",
+      "en": "https://itunes.apple.com/us/app/caixabank/id318806094?mt=8"
+    },
+    "pushConfig": "tbd",
+    "sessionTimeout": 1000,
+    "configTimeOut": 60,
+    "blockingMode":false,
+    "analytics": "clave_analyics",
+    "featureAvailability": {
+      "default": [
+        {
+          "key": "showNovedadesEMMA",
+          "name": "Mostrar novedades de EMMA",
+          "operativeCode": "COMMONS",
+          "status": 1
+        },
+        {
+          "key": "showMyActivity",
+          "name": "mostrar mi actividad",
+          "operativeCode": "DASHBO",
+          "status": 1
+        },
+        {
+          "key": "hideBookingService",
+          "name": "esconder el servicio booking.com",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key": "isMCALocalizerSyncActive",
+          "name": "Habilitar la funcionalidad de sincronizar el dispositivo con CMS",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key": "isMCALocalizerGetTextActive",
+          "name": "Habilitar la funcionalidad de obtener textos desde CMS",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key" : "isCMSActive",
+          "name": "Habilitar la funcionalidad del CMS",
+          "operativeCode": "MCALOCALIZER",
+          "status": 0
+        },
+        {
+          "key" : "showKyc",
+          "name": "Show KYC postlogin state",
+          "operativeCode": "Commons",
+          "status": 1
+        },
+        {
+          "key" : "EMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        },
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 1
+        },
+        {
+          "key": "SSO",
+          "name": "bloqueo de SSO",
+          "operativeCode": "SSO",
+          "status": 1
+        },
+        {
+          "key": "saltoaSCG620",
+          "operativeCode": "SMTMNY",
+          "name": "bloqueo de salto a LOM",
+          "status": 0
+        },
+        {
+          "key": "contratacion",
+          "name": "bloqueo de smart money",
+          "operativeCode": "SMTMNY",
+          "status": 0
+        },
+        {
+          "key": "aportacion",
+          "operativeCode": "SMTMNY",
+          "name": "bloqueo de aportación",
+          "status": 0
+        },
+        {
+          "key": "reintegro",
+          "operativeCode": "SMTMNY",
+          "name": "bloqueo de reintegro",
+          "status": 0
+        },
+        {
+          "key": "detalle",
+          "operativeCode": "SMTMNY",
+          "name": "bloqueo de detalle",
+          "status": 0
+        },
+        {
+          "key": "sdkGoogleFacebook",
+          "name": "SDK Facebook Firebase",
+          "operativeCode": "COMMONS_FACEBOOK_GOOGLE_SDK",
+          "status": 0
+        },
+        {
+          "key": "localizationPermissionFirstTime",
+          "name": "bloqueo de peticion permisos localizacion primera vez",
+          "operativeCode": "COMMONS",
+          "status": 1
+        },
+        {
+          "key": "localizationPermissionForce",
+          "name": "bloqueo de peticion permisos localizacion forzada",
+          "operativeCode": "COMMONS",
+          "status": 1
+        },
+        {
+          "key": "localizationPermissionSend",
+          "name": "bloqueo de peticion permisos localizacion enviar",
+          "operativeCode": "COMMONS",
+          "status": 1
+        },
+        {
+          "Key" : "menuSectionCatalogoProductos",
+          "name": "Catalogo de productos de portal",
+          "operationCode": "menuSectionCatalogoProductos",
+          "status": 0
+        },
+        {
+          "key": "buscadorMovimientos",
+          "name": "buscador de movimientos por concepto",
+          "operativeCode": "CONCUE",
+          "status": 0
+        },
+        {
+          "key": "adobeCampaign",
+          "name": "SDK Adobe Campaign",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key": "adobeTarget",
+          "name": "Adobe Target Init",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key": "showMyBox",
+          "name": "activar mybox en menu necesidades",
+          "operativeCode": "APPCBK",
+          "status": 1
+        },
+        {
+          "key": "hideMyBoxCallMeButton",
+          "name": "ocultar el boton call me now en el detalle de MyBox",
+          "operativeCode": "SEGUROS",
+          "status": 1
+        },
+        {
+          "key": "showMortgages",
+          "name": "activar hipotecas en menu necesidades",
+          "operativeCode": "APPCBK",
+          "status": 1
+        },
+        {
+          "key": "showRenting",
+          "name": "activar renting en menu necesidades",
+          "operativeCode": "APPCBK",
+          "status": 1
+        },
+        {
+          "key":"isGeoSdkActive",
+          "name":"Activate Geo SDK",
+          "operativeCode":"GEO",
+          "status":0
+        },
+        {
+          "key": "hideMyBoxSaludCallMeNowButton",
+          "name": "ocultar el boton call me now en el detalle de MyBoxSalud",
+          "operativeCode": "SEGUROS",
+          "status": 1
+        },
+        {
+          "key": "hideMyBoxCatalogueSalud",
+          "name": "ocultar la card de MyBoxSalud en el catálogo de MyBox",
+          "operativeCode": "SEGUROS",
+          "status": 1
+        },
+        {
+          "key": "hideRentalcarsService",
+          "name": "esconder el servicio rentalcars",
+          "operativeCode": "CMPRESTL",
+          "status": 1
+        },
+        {
+          "key": "hideHotelsService",
+          "name": "esconder el servicio hoteles.com",
+          "operativeCode": "CMPRESTL",
+          "status": 1
+        },
+        {
+          "key": "disableNeoEnglish",
+          "name": "deshabilitar Neo en inglés",
+          "operativeCode": "CHATBOT",
+          "status": 1
+        },
+        {
+          "key": "isBugurooEnabled",
+          "name": "deshabilitar buguroo",
+          "operativeCode": "COMMONS",
+          "status": 0
+        },
+        {
+          "key":"multifirmaNativo",
+          "name":"multifirma en version nativa",
+          "operativeCode":"MAILBOX",
+          "status":0
+        },
+        {
+          "key": "girosAltaBeneficiarioNativo",
+          "name": "mostrar la operativa nativa para el alta de beneficiario",
+          "operativeCode": "GIROS",
+          "status": 0
+        },
+        {
+          "key": "SendReportSpinnerBlock",
+          "name": "timeout interno de spinner con evento a splunk",
+          "operativeCode": "COMMONS",
+          "status": 1
+        },
+        {
+          "key": "showSafeInsurance",
+          "name": "mostrar la opcion de seguros de ahorro",
+          "operativeCode": "SEGUROS",
+          "status": 1
+        }
+      ],
+      "5.6.0": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.5.0": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.11": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.10": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.9": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.8": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.7": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.6": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.4": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.2": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.1.0": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.7": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.6": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.5": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.4": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.3": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.2": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.1": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ],
+      "5.0.0": [
+        {
+          "key" : "newEMMA",
+          "name": "SDK EMMA",
+          "operativeCode": "EMMA",
+          "status": 0
+        }
+      ]
+    },
+    "maxNonRefresh": 3600
+  },
+  "application": {
+    "resources": {
+      "faqs": "https://www.caixa.es/faqs",
+      "images": "https://www.caixa.es./images"
+    },
+    "properties": {
+      "segmentos": {
+        "MIC": true,
+        "WEA": true,
+        "PRIV": true,
+        "PRE": true,
+        "HOL": true,
+        "AGR": true,
+        "NEG": true,
+        "FSE": true,
+        "FAM": true,
+        "INT": true,
+        "IMA": true,
+        "NOW": true
+      },
+      "geoLocalNotificationDelay": 900,
+      "carrouselDelaySeconds": 3,
+      "forceEnableAdobeCampaign": "",
+      "clientSupport": {
+        "es": "https://webm.caixabank.es/Auxiliar/APPatencion_es.html",
+        "ca": "https://webm.caixabank.es/Auxiliar/APPatencion_ca.html",
+        "en": "https://webm.caixabank.es/Auxiliar/APPatencion_en.html",
+        "eu": "https://webm.caixabank.es/Auxiliar/APPatencion_eu.html",
+        "gl": "https://webm.caixabank.es/Auxiliar/APPatencion_gl.html"
+      },
+      "imaginBank" : {
+        "appId" : "imaginbank",
+        "storeUrl" : "https://itunes.apple.com/es/app/imaginbank/id1069665204"
+      },
+      "legalNotice": "https://m.caixabank.es/plataforma/appsmanager/legalnotice/download",
+      "lom": "https://m.caixabank.es/WAP/SPDServlet?CANAL=Y&PASSTHROUGH=ALWAYS&DEMO=0&ENTORNO=L",
+      "mifid": {
+        "es": "https://www.caixabank.es/particular/general/mifid_es.html",
+        "ca": "https://www.caixabank.es/particular/general/mifid_ca.html"
+      },
+      "clientInfo": {
+        "es": "https://www.caixabank.es/particular/general/infoclientes_es.html",
+        "ca": "https://www.caixabank.es/particular/general/infoclientes_ca.html"
+      },
+      "origen":"51402",
+      "timeoutConnect":60,
+      "timeoutSessionLO":300,
+      "featureAvailability": {
+        "default":[
+        ]
+      },
+      "opinatorDelaySeconds": 5,
+      "spinnerSplunkDelaySeconds": 60,
+      "featureLOMRegex": {
+        "externalBrowserURLRegexPatternsList": [
+          "/plataforma/webclip/",
+          "^(tel|mailto):",
+          "^(http|https)://(itunes.apple.com|phobos.apple.com)",
+          "/plataforma/webclip/",
+          "^(http|https):\\/\\/(.+\\.)(lacaixa|caixabank)\\.es(.+\\/)*plataforma/webclip",
+          "^(http|https):\\/\\/(.+\\.)(lacaixa|caixabank)\\.es/plataforma/WAPDownloader"
+        ],
+        "logoutDetectionRegexPatternsList": [
+          "^https:\\/\\/(pre\\.|tst\\.)?m[0-9]*\\.(lacaixa|caixabank)\\.es\\/WAP\\/(.+\\/)?SPDServlet\\?(.*&)?(PN=LGN&(.*&)?PE=1|PE=1&(.*&)?PN=LGN)(&.*)?",
+          "^(http|https):\\/\\/(pre\\.|tst\\.)?m[0-9]*\\.(lacaixa|caixabank)\\.es\\/"
+        ],
+        "pdfDetectionRegexPatternsList": [
+          "^(http|https):\\/\\/(.+)/WAP/PDF",
+          "^(http|https):\\/\\/(.+)/Estaticos/pdf/",
+          "^(http|https):\\/\\/(.+)\\.pdf(?=\\?|$)"
+        ],
+        "lomDetectionRegexPatternsList": [
+          "(pre\\.|tst\\.)?m[0-9]*\\.(lacaixa|caixabank)\\.es"
+        ],
+        "powlinkDetectionRegexPatternsList": [
+          "(http|https):\\/\\/(caixabank|caixabankdev|cbk|cbkd).(powlink|pwlnk)\\.io(.+)",
+          "(http|https):\\/\\/(caixabankdev\\.ad|ad|caixabank\\.ad).(caixabank)\\.es(.+)"
+        ]
+      },
+      "pushNumberAccess": 4,
+      "pushDaysWaiting": 30,
+      "psd2ProcessEnabled":false,
+      "trackerMaxNumberShow": 3,
+      "trackerLastShowDays": 30,
+      "tarjet": {
+        "caixabankPaymentsNameChangeDate":"20190719160000",
+        "caixabankPaymentsNameChangeFormat":"yyyyMMddHHmmss"
+      },
+      "sdk_google_facebook": true,
+      "chatbot": {
+        "demoEnabled": false
+      },
+      "transf": {
+        "espressEnable": true,
+        "urgentEnable": false
+      },
+      "localizationPermissions": {
+        "maxPreviousViews": 2,
+        "minimumTimeLastDisplayInDays": 60
+      },
+      "AperturaTotalTeens":false,
+      "configEmpresaEnabled":2,
+      "areYouNewClient": {
+        "es": "https://m.lacaixa.es/WAP/SPDServlet?PN=AON&PE=20&IDIOMA=02&IDIOMA2=02&CANAL=Y&DEMO=0&FLAG_ALTA_WAP=S",
+        "ca": "https://m.lacaixa.es/WAP/SPDServlet?PN=AON&PE=20&IDIOMA=01&IDIOMA2=01&CANAL=Y&DEMO=0&FLAG_ALTA_WAP=S",
+        "en": "https://m.lacaixa.es/WAP/SPDServlet?PN=AON&PE=20&IDIOMA=03&IDIOMA2=03&CANAL=Y&DEMO=0&FLAG_ALTA_WAP=S",
+        "eu": "https://m.lacaixa.es/WAP/SPDServlet?PN=AON&PE=20&IDIOMA=10&IDIOMA2=10&CANAL=Y&DEMO=0&FLAG_ALTA_WAP=S",
+        "gl": "https://m.lacaixa.es/WAP/SPDServlet?PN=AON&PE=20&IDIOMA=11&IDIOMA2=11&CANAL=Y&DEMO=0&FLAG_ALTA_WAP=S"
+      },
+      "areYouNewNotClient": {
+        "es": "https://www.caixabank.es/particular/general/nuevocliente_es.html",
+        "ca": "https://www.caixabank.es/particular/general/nuevocliente_ca.html",
+        "en": "https://www.caixabank.es/particular/general/nuevocliente_es.html",
+        "eu": "https://www.caixabank.es/particular/general/nuevocliente_es.html",
+        "gl": "https://www.caixabank.es/particular/general/nuevocliente_es.html"
+      },
+      "emmaEndPointCaixaBank": "oncloud",
+      "geoSdkRadius":100,
+      "travelForbiddenCountries":[
+        {
+          "iso":"KP",
+          "name":"North Korea"
+        },
+        {
+          "iso":"GQ",
+          "name":"Equatorial Guinea"
+        },
+        {
+          "iso":"IR",
+          "name":"Iran"
+        },
+        {
+          "iso":"SS",
+          "name":"South Sudan"
+        },
+        {
+          "iso":"SY",
+          "name":"Syrian"
+        },
+        {
+          "iso":"CF",
+          "name":"Central African Republic"
+        },
+        {
+          "iso":"VE",
+          "name":"Venezuela"
+        },
+        {
+          "iso":"NG",
+          "name":"Nigeria"
+        }
+      ],
+      "suggestions": {
+        "cards": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=u6zEefmslU4&index=3&list=PL137BFC7EAB99E4D2",
+            "time" : "1:26"
+          }
+        },
+        "deposits": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=DIYOKowkg0g",
+            "time" : "1:15"
+          }
+        },
+        "pensions": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=48YvGr33HKQ",
+            "time" : "1:06"
+          }
+        },
+        "pensions2": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=t_ziELZ6--g&index=3&list=PL4B84F5EA83E016CA",
+            "time" : "2:05"
+          }
+        },
+        "loans": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=ALCNYjz7KRE",
+            "time" : "0:58"
+          }
+        },
+        "loans2": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=y7CHs7078Xs",
+            "time" : "0:31"
+          },
+          "ca": {
+            "url" : "https://www.youtube.com/watch?v=OPhuebyTyro",
+            "time" : "0:32"
+          }
+        },
+        "loans3": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=tmhALzj5Q20",
+            "time" : "0:29"
+          },
+          "ca": {
+            "url" : "https://www.youtube.com/watch?v=569eVYtGgPA",
+            "time" : "0:29"
+          }
+        },
+        "loans4": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=dwRJ16cubb0",
+            "time" : "0:40"
+          },
+          "ca": {
+            "url" : "https://www.youtube.com/watch?v=dJ8Xj34354Y",
+            "time" : "0:37"
+          }
+        },
+        "caixabankPay": {
+          "es": {
+            "url" : "https://www.youtube.com/watch?v=L8rUPP2yy1Y&list=PL34A873CC0BEBD48A&index=1",
+            "time" : "1:01"
+          },
+          "ca": {
+            "url" : "https://www.youtube.com/watch?v=RXdD-n8rjcw",
+            "time" : "1:01"
+          }
+        }
+      },
+      "seguroContratacionHogarDocumento1" : "ASG00058,ASG00112",
+      "seguroContratacionHogarDocumento2" : "ASG00039"
+    }
+  }
+}
