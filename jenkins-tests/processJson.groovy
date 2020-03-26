@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat
 private static Map getInputMap() {
     //def inputFile = new File("input.json")
     //def inputFile = context.readFile("input.json")
-    def inputFile = readJSON file: 'input.json'
+    def inputFile = readJSON file: "input.json"
 
     def inputJSON = new JsonSlurper().parseText(inputFile.text)
 
@@ -42,7 +42,7 @@ private static Map getParamsToPipeAndApp() {
 
     //def inputFile = new File("input.json")
     //def inputFile = context.readFile("input.json")
-    def inputFile = readJSON file: 'input.json'
+    def inputFile = readJSON file: "input.json"
 
 
     def parametersMap = new JsonSlurper().parseText(inputFile.text)
@@ -399,7 +399,7 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         //Add fichero entry
         paramsParametrosTemp.put("fichero", "config_"+partsTechnology[0])
         //paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("config.json")))
-        def input2 = readJSON file: 'input.json'
+        def input2 = readJSON file: "input.json"
             paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, input2))
         paramsParametrosArrayTmp.add( paramsParametrosTemp )
 
@@ -409,7 +409,7 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
 
     paramsParametrosTempMethods.put("fichero", "methods_"+partsTechnology[0])
     //paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("methods.json") ))
-    def methods2 = readJSON file: 'methods.json'
+    def methods2 = readJSON file: "methods.json"
     paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, methods2) )
     paramsParametrosArrayTmp.add( paramsParametrosTempMethods )
 
