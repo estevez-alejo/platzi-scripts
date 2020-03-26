@@ -23,7 +23,7 @@ pipeline {
           println bodyText
 
 
-def code = load 'jenkins-tests/processJson.groovy'
+def code2 = load 'jenkins-tests/processJson.groovy'
 
 
 
