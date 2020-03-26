@@ -12,10 +12,12 @@ import java.text.SimpleDateFormat
 private static Map getInputMap() {
     //def inputFile = new File("input.json")
     //def inputFile = context.readFile("input.json")
-    def inputFile = readJSON file: "input.json"
+    //def inputFile = readJSON file: "input.json"
+
+  def inputFile = readJSON text: '{ "key": "value" }'
 
 
-    def inputFile = readJSON text: '{
+    def inputFile2 = readJSON text: '{
        "upstreamJobName":"ios-pod-build-normal",
        "codeArtifactURL":"https://movbuild.svb.lacaixa.es:8443/jenkins/job/ios-pod-build-normal/7510/artifact/sources_for_gsa.zip",
        "firstLevelDependencies":[
@@ -97,8 +99,8 @@ private static Map getParamsToPipeAndApp() {
     //def inputFile = new File("input.json")
     //def inputFile = context.readFile("input.json")
 
-
-    def inputFile = readJSON text: '{
+def inputFile = readJSON text: '{ "key": "value" }'
+    def inputFile2 = readJSON text: '{
        "upstreamJobName":"ios-pod-build-normal",
        "codeArtifactURL":"https://movbuild.svb.lacaixa.es:8443/jenkins/job/ios-pod-build-normal/7510/artifact/sources_for_gsa.zip",
        "firstLevelDependencies":[
