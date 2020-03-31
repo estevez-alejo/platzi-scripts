@@ -68,7 +68,7 @@ private static Map getParamsToPipeAndApp() {
     def parametersMap = getInputMap()
 
 
-    def type = "AND.BF"
+    def type = "IOS.BF"
     Date date = new Date()
     SimpleDateFormat timestampFormatDay = new SimpleDateFormat("yyyyMMdd");
 
