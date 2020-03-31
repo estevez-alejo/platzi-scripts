@@ -32,6 +32,7 @@ println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toStrin
 //Logger.info(this, "mensaje", Logger.INFO)
 
 private static Map getParamsToPipeAndApp() {
+    println("call  getParamsToPipeAndApp()")
     //Logger.info(context, "Into AppGeneratorAndGsa.getParamsToPipeAndApp", levelOfLog)
     def paramsMapAND = [:]
     def paramsMapANDTrazabilidad = new ArrayList<HashMap>(1)
@@ -247,7 +248,7 @@ private static String findPathServicesAnd(context,parametersMap,levelOfLog) {
 private static Map parseFileToParametrosMap(levelOfLog, jsonFileText) {
 
     def contenidoMap = new ArrayList<HashMap>()
-
+    println("call  parseFileToParametrosMap")
     if(jsonFileText != null ) {
 
         try {
@@ -262,7 +263,7 @@ private static Map parseFileToParametrosMap(levelOfLog, jsonFileText) {
             //def messagesJson = JsonSlurperClassic.parseText(jsonFileText)
 def messagesJson = jsonFileText
 
-            println('testing ' + messagesJson)
+            println("testing " + messagesJson)
             //Go across the json file and create  propiedad of path of structure json and value
             //context.println("Json parser is "+messagesJson+" and is the type "+messagesJson.getClass())
 
