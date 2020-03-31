@@ -257,10 +257,12 @@ private static Map parseFileToParametrosMap(levelOfLog, jsonFileText) {
 
             def startTime = System.currentTimeMillis()
 
-            def JsonSlurperClassic = new JsonSlurperClassic()
+          //  def JsonSlurperClassic = new JsonSlurperClassic()
             //def messagesJson = JsonSlurperClassic.parseText(jsonFileText.text)
+            //def messagesJson = JsonSlurperClassic.parseText(jsonFileText)
 def messagesJson = jsonFileText
 
+            println('alejo ' + messagesJson)
             //Go across the json file and create  propiedad of path of structure json and value
             //context.println("Json parser is "+messagesJson+" and is the type "+messagesJson.getClass())
 
@@ -396,7 +398,7 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         //Add fichero entry
         paramsParametrosTemp.put("fichero", "config_"+partsTechnology[0])
         //paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/config.json")))
-        paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new JsonSlurper().parse("http://www.alejoestevez.com/config.json".toURL())))
+        paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new JsonSlurperClassic().parse("http://www.alejoestevez.com/config.json".toURL())))
 
 
         paramsParametrosArrayTmp.add( paramsParametrosTemp )
@@ -407,7 +409,7 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
 
     paramsParametrosTempMethods.put("fichero", "methods_"+partsTechnology[0])
     //paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/methods.json") ))
-    paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new JsonSlurper().parse("http://www.alejoestevez.com/config.json".toURL())))
+    paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new JsonSlurperClassic().parse("http://www.alejoestevez.com/config.json".toURL())))
     paramsParametrosArrayTmp.add( paramsParametrosTempMethods )
 
     return paramsParametrosArrayTmp
