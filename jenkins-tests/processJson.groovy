@@ -262,7 +262,7 @@ private static Map parseFileToParametrosMap(levelOfLog, jsonFileText) {
             //def messagesJson = JsonSlurperClassic.parseText(jsonFileText)
 def messagesJson = jsonFileText
 
-            println('alejo ' + messagesJson)
+            println('testing ' + messagesJson)
             //Go across the json file and create  propiedad of path of structure json and value
             //context.println("Json parser is "+messagesJson+" and is the type "+messagesJson.getClass())
 
