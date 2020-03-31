@@ -68,7 +68,7 @@ private static Map getParamsToPipeAndApp() {
     def parametersMap = getInputMap()
 
 
-    def type = "IOS.BF"
+    def type = "AND.BF"
     Date date = new Date()
     SimpleDateFormat timestampFormatDay = new SimpleDateFormat("yyyyMMdd");
 
@@ -274,16 +274,13 @@ private static Map parseFileToParametrosMap(levelOfLog, jsonFileText) {
     if(jsonFileText != null ) {
 
         try {
-
          //   Logger.info(context,"[INFO] Into parseFileToParametrosMap",levelOfLog)
-
-
             def startTime = System.currentTimeMillis()
 
           //  def JsonSlurperClassic = new JsonSlurperClassic()
             //def messagesJson = JsonSlurperClassic.parseText(jsonFileText.text)
             //def messagesJson = JsonSlurperClassic.parseText(jsonFileText)
-def messagesJson = jsonFileText
+            def messagesJson = jsonFileText
 
             println("testing " + messagesJson)
             //Go across the json file and create  propiedad of path of structure json and value
