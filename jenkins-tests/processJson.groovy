@@ -143,7 +143,7 @@ private static Map getParamsToPipeAndApp() {
 
     if (paramsMapANDDepsComp != null) {
 
-        paramsMapAND.put("depsComponentes", paramsMapANDDepsComp)
+        paramsMapAND.put("depsComponentess", paramsMapANDDepsComp)
     }
 
     if (paramsMapANDParametros != null) {
