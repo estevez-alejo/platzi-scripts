@@ -9,21 +9,6 @@ import java.text.SimpleDateFormat
 //import com.caixabank.movilidad.log.*
 
 
-class Logger {
-
- // Standard output
-private static out = System.out
-
-public static setOutput(out) {
-this.out = out
-}
-
-
-public static log(String message) {
-Logger.out.println(message)
-}
-}
-
 
 private static Map getInputMap() {
     //def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
@@ -34,24 +19,19 @@ private static Map getInputMap() {
     inputJSON
 }
 
-def config = new HashMap()
-def binding = getBinding()
-config.putAll(binding.getVariables())
-Logger.setOutput(config['out'])
-
 println ("Init Process JSON: ${LocalDateTime.now().toString().toString()}")
 println ("Input Map:" + getInputMap().toString())
 //println "Output Map:" + getParamsToPipeAndApp().toMapString()
 
 
-def paramsMapAND = getParamsToPipeAndApp(out)
+def paramsMapAND = getParamsToPipeAndApp()
 println ("Output Map:" + paramsMapAND.toString())
 println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toString()}")
 
 //Logger.info(this, "mensaje", Logger.INFO)
 
 private static Map getParamsToPipeAndApp() {
-    Logger.log("prueba")
+    echo ("prueba")
     //Logger.info(context, "Into AppGeneratorAndGsa.getParamsToPipeAndApp", levelOfLog)
     def paramsMapAND = [:]
     def paramsMapANDTrazabilidad = new ArrayList<HashMap>(1)
