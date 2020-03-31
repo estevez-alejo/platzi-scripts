@@ -17,9 +17,15 @@ private static Map getInputMap() {
     //def inputFile = new File("www.alejoestevez/input.json")
     //def inputJSON = new JsonSlurper().parseText(inputFile.text)
     def inputJSON = new JsonSlurper().parse("http://www.alejoestevez.com/input.json".toURL())
-
     inputJSON
 }
+
+
+private static Map getConfigMap() {
+    def configJSON = new JsonSlurper().parse("http://www.alejoestevez.com/config.json".toURL())
+    configJSON
+}
+
 
 def jsonInput = JsonOutput.toJson(getInputMap())
 println ("Init Process JSON: ${LocalDateTime.now().toString()}")
@@ -29,13 +35,18 @@ println JsonOutput.prettyPrint(jsonInput)
 
 
 def paramsMapAND = getParamsToPipeAndApp()
-println ("Output Map:" + paramsMapAND.toString())
+//println ("Output Map:" + paramsMapAND.toString())
 
 //def json = new groovy.json.JsonBuilder()
 //json rootKey: paramsMapAND
 
-def jsonOutput = JsonOutput.toJson(paramsMapAND)
+def jsonConfig = JsonOutput.toJson(getConfigMap())
+println ("Config Json Process JSON: ${LocalDateTime.now().toString()}")
+println JsonOutput.prettyPrint(jsonConfig)
 
+
+
+def jsonOutput = JsonOutput.toJson(paramsMapAND)
 println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString()}")
 println JsonOutput.prettyPrint(jsonOutput)
 
