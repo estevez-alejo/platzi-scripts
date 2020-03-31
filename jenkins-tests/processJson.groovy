@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat
 
 private static Map getInputMap() {
     //def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
-    def inputFile = new File("https://api.myjson.com/bins/10mzec")
+    def inputFile = new File("http://www.alejoestevez/input.json")
     //def inputJSON = new JsonSlurper().parseText(inputFile.text)
     def inputJSON = new JsonSlurper().parse(inputFile.toURL())
 
