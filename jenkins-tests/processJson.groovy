@@ -6,6 +6,7 @@ import groovy.json.JsonSlurperClassic
 import java.time.*
 import java.text.SimpleDateFormat
 import java.util.logging.Logger
+import groovy.json.JsonOutput;
 
 //import com.caixabank.movilidad.log.*
 
@@ -22,18 +23,15 @@ private static Map getInputMap() {
 
 println ("Init Process JSON: ${LocalDateTime.now().toString().toString()}")
 println ("Input Map:" + getInputMap().toString())
-//println "Output Map:" + getParamsToPipeAndApp().toMapString()
-
 
 def paramsMapAND = getParamsToPipeAndApp()
-println ("Output Map:" + paramsMapAND.toString())
+//println ("Output Map:" + paramsMapAND.toString())
+println (JsonOutput.prettyPrint(paramsMapAND.toString()));
 println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toString()}")
 
-//Logger.info(this, "mensaje", Logger.INFO)
+
 
 private static Map getParamsToPipeAndApp() {
-    Logger logger = Logger.getLogger('org.example.jsonprocessing')
-logger.info('prueba!')
     //Logger.info(context, "Into AppGeneratorAndGsa.getParamsToPipeAndApp", levelOfLog)
     def paramsMapAND = [:]
     def paramsMapANDTrazabilidad = new ArrayList<HashMap>(1)
