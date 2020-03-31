@@ -29,9 +29,9 @@ println ("Output Map:" + paramsMapAND.toString())
 //def json = new groovy.json.JsonBuilder()
 //json rootKey: paramsMapAND
 
-def json = JsonOutput.toJson(paramsMapAND)
+def json = groovy.json.JsonOutput.toJson(paramsMapAND)
 
-println groovy.json.JsonOutput.prettyPrint(json))
+println groovy.json.JsonOutput.prettyPrint(json)
 
 println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toString()}")
 
