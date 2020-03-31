@@ -13,7 +13,7 @@ private static Map getInputMap() {
     //def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
    // def inputFile = new File("https://api.myjson.com/bins/10mzec")
     //def inputJSON = new JsonSlurper().parseText(inputFile.text)
-    def inputJSON = new JsonSlurper().parse("https://www.alejoestevez.com/input.json".toURL())
+    def inputJSON = new JsonSlurper().parse("http://www.alejoestevez.com/input.json".toURL())
 
     inputJSON
 }
