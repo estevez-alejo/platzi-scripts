@@ -31,7 +31,7 @@ println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toStrin
 //Logger.info(this, "mensaje", Logger.INFO)
 
 private static Map getParamsToPipeAndApp() {
-    echo ("prueba")
+    echo "prueba"
     //Logger.info(context, "Into AppGeneratorAndGsa.getParamsToPipeAndApp", levelOfLog)
     def paramsMapAND = [:]
     def paramsMapANDTrazabilidad = new ArrayList<HashMap>(1)
