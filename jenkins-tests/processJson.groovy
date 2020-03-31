@@ -11,9 +11,9 @@ import java.text.SimpleDateFormat
 
 private static Map getInputMap() {
     //def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
-   // def inputFile = new File("https://api.myjson.com/bins/10mzec")
+    def inputFile = new File("https://api.myjson.com/bins/10mzec")
     //def inputJSON = new JsonSlurper().parseText(inputFile.text)
-    def inputJSON = new JsonSlurper().parse("http://www.alejoestevez.com/input.json".toURL())
+    def inputJSON = new JsonSlurper().parse(inputFile.toURL())
 
     inputJSON
 }
@@ -39,8 +39,10 @@ private static Map getParamsToPipeAndApp() {
     def paramsMapANDParametros = new ArrayList<HashMap>()
     def paramsMapANDDepsComp = new ArrayList<HashMap>(1)
 
-    def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
-    def parametersMap = new JsonSlurper().parseText(inputFile.text)
+    //def inputFile = new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/input.json")
+
+    //def parametersMap = new JsonSlurper().parseText(inputFile.text)
+    def parametersMap = getInputMap()
 
 
     def type = "IOS.BF"
@@ -393,6 +395,7 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         def paramsParametrosTemp= [:]
         //Add fichero entry
         paramsParametrosTemp.put("fichero", "config_"+partsTechnology[0])
+        //paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/config.json")))
         paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/config.json")))
         paramsParametrosArrayTmp.add( paramsParametrosTemp )
 
@@ -401,7 +404,8 @@ private static ArrayList<HashMap> getParametrosConfigMethodsFromFiles(levelOfLog
         def paramsParametrosTempMethods= [:]
 
     paramsParametrosTempMethods.put("fichero", "methods_"+partsTechnology[0])
-    paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/methods.json") ))
+    //paramsParametrosTempMethods.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/methods.json") ))
+    paramsParametrosTemp.put("contenido", this.parseFileToParametrosMap(levelOfLog, new File("/var/lib/jenkins/workspace/test-pipeline-sum-node/jenkins-tests/config.json")))
     paramsParametrosArrayTmp.add( paramsParametrosTempMethods )
 
     return paramsParametrosArrayTmp
