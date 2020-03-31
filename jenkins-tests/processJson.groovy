@@ -25,9 +25,13 @@ println ("Input Map:" + getInputMap().toString())
 
 def paramsMapAND = getParamsToPipeAndApp()
 println ("Output Map:" + paramsMapAND.toString())
-def json = new groovy.json.JsonBuilder()
-json rootKey: paramsMapAND
-println groovy.json.JsonOutput.prettyPrint(json.toString())
+
+//def json = new groovy.json.JsonBuilder()
+//json rootKey: paramsMapAND
+
+def json = JsonOutput.toJson(paramsMapAND)
+
+println groovy.json.JsonOutput.prettyPrint(json))
 
 println ("EndProcess Json Process JSON: ${LocalDateTime.now().toString().toString()}")
 
